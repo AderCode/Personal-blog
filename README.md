@@ -50,7 +50,7 @@
         - ~Go to http://localhost:3000 and make sure that the app is running~
 
     - Create the React front end:
-        - Create a component to input blogs
+        - ~Create a component to input blogs~
         - Create a component to display an individual blog
 
         <!-- 

@@ -1,20 +1,25 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import HelloWorld from './hello';
-import GoodbyeWorld from './goodbye';
+import BlogNewPost from './BlogNewPost';
+import BlogSelected from './BlogSelected';
 
 class Navigation extends Component {
 
     render() {
         return (
             <Router>
-                <Fragment>
-                    <Link to="/goodbye">Goodbye</Link>
-                    <Switch>
-                        <Route exact path="/" component={HelloWorld} />
-                        <Route path="/goodbye" component={GoodbyeWorld} />
-                    </Switch>
-                </Fragment>
+                <div className="container">
+                    <div className="row">
+                        <Link to="/post/blog">New Blog Post.</Link>
+                        <Link to="/blog/1">View Blog</Link>
+                        <div className="row">
+                            <Switch>
+                                <Route exact path="/blog/1" component={BlogSelected} />
+                                <Route path="/post/blog" component={BlogNewPost} />
+                            </Switch>
+                        </div>
+                    </div>
+                </div>
             </Router>
         )
     }
