@@ -1,8 +1,6 @@
-## Lab Assignment
+## Lab Assignment: Your Personal Blog!
 
 ### REQUIRED:
-
-#### Your Personal Blog!
 
 - Create a database named blog
 
