@@ -51,7 +51,7 @@
 
     - Create the React front end:
         - ~Create a component to input blogs~
-        - Create a component to display an individual blog
+        - ~Create a component to display an individual blog~
 
         <!-- 
             Wrap completed tasks in ~ to strike them out  
