@@ -5,18 +5,18 @@ import db from '../my_db'
 
 let router = Router();
 
-// router.get('/:id?', (req, res) => {
-//     let id = req.params.id;
-//   if (id) {
-//     store.GetChirp(id).then(results => {
-//       res.send(results)
-//     })
-//   } else {
-//     store.GetChirps().then(results => {
-//       res.send(results);
-//     });
-//   }
-// });
+router.get('/:id?', (req, res) => {
+    let id = req.params.id;
+  if (id) {
+    db.GetBlog(id).then(results => {
+      res.send(results)
+    })
+  } else {
+    db.GetBlogs().then(results => {
+      res.send(results);
+    });
+  }
+});
 
 
 

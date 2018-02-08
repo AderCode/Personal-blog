@@ -10,11 +10,12 @@ class Navigation extends Component {
             <Router>
                 <div className="container">
                     <div className="row">
-                        <Link to="/post/blog">New Blog Post.</Link>
-                        <Link to="/blog/1">View Blog</Link>
+                        <Link to="/">\ Home /</Link>
+                        <Link to="/post/blog">\ New Blog Post /</Link>
+                        <Link to="/blog/1">\ View Blog /</Link>
                         <div className="row">
                             <Switch>
-                                <Route exact path="/blog/1" component={BlogSelected} />
+                                <Route exact path="/blog/:id" component={BlogSelected} />
                                 <Route path="/post/blog" component={BlogNewPost} />
                             </Switch>
                         </div>

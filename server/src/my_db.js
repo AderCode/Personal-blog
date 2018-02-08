@@ -31,14 +31,51 @@ let postBlog = (title, content) => {
     });
   };
 
+  let getBlog = (blogid) => {
+    return new Promise((resolve, reject) => {
+      connection.query(`SELECT * FROM Blogs WHERE id = ${blogid}`, (err, results, field) => {
+        if (err) {
+          reject();
+          connection.end();
+          return console.log("\x1b[31m", "¯l_(ツ)_/¯ err: ", err);
+        }
+        console.log('\x1b[32m', '(>^.^)> BEGIN getBlog(blogid) Information: <(^.^<)', '\x1b[0m');
+        console.log('\x1b[32m', '1. blogid = ', blogid, '\x1b[0m');
+        console.log('\x1b[32m', '(>^.^)> END postBlog(title, content) Information: <(^.^<)', '\x1b[0m');
 
+
+
+        resolve(results);
+  
+      });
+    });
+  };
+
+  let getBlogs = () => {
+    return new Promise((resolve, reject) => {
+      connection.query(`SELECT * FROM Blogs`, (err, results, field) => {
+        if (err) {
+          reject();
+          connection.end();
+          return console.log("\x1b[31m", "¯l_(ツ)_/¯ err: ", err);
+        }
+        console.log('\x1b[32m', '(>^.^)> BEGIN getBlogs() Information: <(^.^<)', '\x1b[0m');
+        console.log('\x1b[32m', '(>^.^)> END getBlog( Information: <(^.^<)', '\x1b[0m');
+
+
+
+        resolve(results);
+  
+      });
+    });
+  };
 
 
 
 module.exports = {
-    PostBlog: postBlog
-    // DeleteChirp: deleteChirp,
-    // GetChirps: getChirps,
+    PostBlog: postBlog,
+    GetBlog: getBlog,
+    GetBlogs: getBlogs,
     // GetChirp: getChirp,
     // UpdateChirp: updateChirp,
     // GetMentions: getMentions
