@@ -3,17 +3,20 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import BlogNewPost from './BlogNewPost';
 import BlogSelected from './BlogSelected';
 import Blogs from './Blogs'
+import NavBar from './NavBar'
+import Home from './Home'
+import Footer from './Footer'
 
 class Navigation extends Component {
 
     render() {
         return (
             <Router>
-                <div className="container">
-                    <div className="row">
-                        <Link to="/">\ Home /</Link>
-                        <Link to="/post/blog">\ New Blog Post /</Link>
-                        <Link to="/blog/1">\ View Blog /</Link>
+                <div>
+                    <NavBar />
+                    <Route exact path='/' component={Home} />
+                    <div className="container mx-auto" style={{ marginTop: '50px' }}>
+                        <div className="row"></div>
                         <div className="row">
                             <Switch>
                                 <Route exact path="/" component={Blogs} />
@@ -22,6 +25,7 @@ class Navigation extends Component {
                             </Switch>
                         </div>
                     </div>
+                    <Footer />
                 </div>
             </Router>
         )

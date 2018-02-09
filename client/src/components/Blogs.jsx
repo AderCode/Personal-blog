@@ -17,29 +17,28 @@ class Blogs extends Component {
         // }
         fetch(url)
             .then(res => {
-                console.log("1st .then res = ", res);
+                // console.log("1st .then res = ", res);
                 return res.json();
             })
             .then(obj => {
-                console.log("2nd .then obj = ", obj);
+                // console.log("2nd .then obj = ", obj);
                 let listBlogs = Object.keys(obj).map(id => {
-                    console.log(`obj[${id}.text = ]`, obj[id].text);
+                    // console.log(`obj[${id}.text = ]`, obj[id].text);
+                    let blog = obj[id]
+                    let description = `${blog.content.substring(0, 25)}...`
+                    let style = {width: '25rem'}
                     return (
-                        <div className="col-md-3">
-                            <div key={obj[id].id} className="card text-center">
-                                <div className="card-header">
-                                    Featured
-                                </div>
-                                <div className="card-body">
-                                    <h5 className="card-title">{obj[id].title}</h5>
-                                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                    <Link to={`/blog/${obj[id].id}`} class="btn btn-primary">View</Link>
-                                </div>
-                                <div className="card-footer text-muted">
-                                    {obj[id]._created}
-                                </div>
+                        <div key={blog.id} className="col-md-4 mx-auto">
+                            <div className="card border border-info rounded" style={style}>
+                            <img className="card-img-top" src={'https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/27503625_1826562950971048_5633044519166377623_o.jpg?oh=fc70ff500362c8744d5ccc92cf089ef4&oe=5ADC0002'} alt="Card image cap" />
+                            <div className="card-body">
+                                <h5 className="card-title">{blog.title}</h5>
+                                <p className="card-text">{description}</p>
+                                <a href="#" className="btn btn-primary">Read more -></a>
                             </div>
                         </div>
+                        </div>
+                        
 
                     );
                 });

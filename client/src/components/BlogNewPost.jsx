@@ -27,8 +27,9 @@ class BlogNewPost extends Component {
 
     render() {
         return (
-            <div className="col">
-                <div className="form-group">
+            <div className="col mt-5">
+                <h1>New Blog Post:</h1>
+                <div className="form-group mt-2">
                     <label>Title:</label>
                     <input onSubmit={(event) => event.preventDefault()} ref={a => {this.title_input = a;}} type="text" className="form-control" id="title_input" placeholder="Title" />
                 </div>
