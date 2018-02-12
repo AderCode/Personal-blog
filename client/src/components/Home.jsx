@@ -7,11 +7,10 @@ class Home extends Component {
         const bgImg = { backgroundImage: `url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HVFIk0gZeivb57aza/videoblocks-aerial-view-of-abstract-futuristic-binary-city-a-high-tech-background-with-digital-arrays-connected-to-the-global-network-cloud-matrix-seamless-loop-alpha-matte_hbgcjj9mb_thumbnail-full01.png)` }
         let outline = { textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }
         return (
-            <div className="jumbotron jumbotron-fluid border-dark border-bottom rounded-bottom" style={bgImg}>
+            <div className="jumbotron jumbotron-fluid border-dark border-bottom rounded-bottom mb-5" style={bgImg}>
                 <div className="container">
                     <h1 className="display-2 text-light text-center" style={outline}>Hello World!</h1>
-                    <h2 className="text-center text-light" style={outline}>- My Journey to Fullstack</h2>
-                    <br /><br />
+                    <h2 className="text-center text-light mb-5" style={outline}>- My Journey to Fullstack</h2>
                     <div id="carouselExampleIndicators" className="carousel slide border border-white rounded" data-ride="carousel">
                         <ol className="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>

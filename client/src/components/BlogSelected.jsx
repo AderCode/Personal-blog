@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { render } from 'react-dom';
+import AuthorInfo from './AuthorInfo';
+import Affiliates from './Affiliates';
 
 class BlogSelected extends Component {
 
@@ -33,13 +35,22 @@ class BlogSelected extends Component {
         let blog = this.state.blog;
         let tags = 'Tags, go, here, but, these, are, just, a, few, placeholders'
         return (
-            <div class="card" style={{width: '18rem'}}>
-                <img class="card-img-top" src="../srcImages/headshot-thumbnail.jpg" alt="Card image cap" />
-                <div class="card-body">
-                    <h5 class="card-title">{blog.title}</h5>
-                    <p class="card-text">{blog.content}</p>
+            <Fragment>
+                <div className="col-md-7 mx-auto">
+                    <div className="card border border-info">
+                    <div className="card-title card-img-overlay outline text-white"><h1>{blog.title}</h1></div>
+                        <img className="card-img-top border-0" src="https://i.ytimg.com/vi/mOD134Dj6-Y/maxresdefault.jpg" alt="Card image cap" />
+                        <div className="card-body">
+                            
+                            <p className="card-text">{blog.content}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div className="col-md-3 mx-auto">
+                    <AuthorInfo />
+                    <Affiliates />
+                </div>
+            </Fragment>
         );
     }
 }

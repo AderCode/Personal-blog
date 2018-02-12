@@ -6,6 +6,7 @@ import Blogs from './Blogs'
 import NavBar from './NavBar'
 import Home from './Home'
 import Footer from './Footer'
+import Login from './Login'
 
 class Navigation extends Component {
 
@@ -13,19 +14,19 @@ class Navigation extends Component {
         return (
             <Router>
                 <div>
-                    <NavBar />
                     <Route exact path='/' component={Home} />
-                    <div className="container mx-auto" style={{ marginTop: '50px' }}>
-                        <div className="row"></div>
-                        <div className="row">
+                    <div className="container-fluid" style={{ marginTop: '50px' }}>
+                        <NavBar />
+                        <div className="row mx-auto my-5 py-5">
                             <Switch>
                                 <Route exact path="/" component={Blogs} />
                                 <Route exact path="/blog/:id" component={BlogSelected} />
                                 <Route exact path="/post/blog" component={BlogNewPost} />
+                                <Route exact path="/login" component={Login} />
                             </Switch>
                         </div>
+                        <Footer />
                     </div>
-                    <Footer />
                 </div>
             </Router>
         )
