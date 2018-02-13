@@ -8,9 +8,9 @@ class AuthorInfo extends Component {
 
     render() {
         return (
-            <div className="card border border-info">
+            <div className="card border border-dark">
                 <ul className="list-group list-group-flush mx-auto"><li className="list-group-item">
-                    <img src="https://lh5.googleusercontent.com/lvvyHY_41jUanhmg51tl06qiz3pk2qPWX-BYkfnllG7curj3pWOgV0C0Co3GYz4xIpieVAKsVoePk9gbnf0e=w3360-h1906-rw" alt="Headshot" className="card-img-top border-bottom border-dark border rounded-circle mx-auto my-3 thumbnail" />
+                    <img src="https://lh3.googleusercontent.com/P8OhuGPZMBtgskt1kX8a2uzyzRgHWJhrfXxEMgaxkpPbu6hqMSHEgIh_sDsAG9ArmUFTsDjT9CdtIHm3lka1=w3360-h1818-rw" alt="Headshot" className="card-img-top border-bottom border-dark border rounded-circle mx-auto my-3 thumbnail" />
                 </li>
                 </ul>
                 <div className="card-body text-center">

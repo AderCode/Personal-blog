@@ -8,7 +8,7 @@ class Affiliates extends Component {
 
     render() {
         return (
-            <div className="card mt-3 border border-info">
+            <div className="card mt-3 border border-dark">
                 <div className="card-header">
                     <h5 className="text-center">Affiliates</h5>
                 </div>

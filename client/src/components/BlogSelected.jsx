@@ -37,7 +37,7 @@ class BlogSelected extends Component {
         return (
             <Fragment>
                 <div className="col-md-7 mx-auto">
-                    <div className="card border border-info">
+                    <div className="card border border-dark">
                     <div className="card-title card-img-overlay outline text-white"><h1>{blog.title}</h1></div>
                         <img className="card-img-top border-0" src="https://i.ytimg.com/vi/mOD134Dj6-Y/maxresdefault.jpg" alt="Card image cap" />
                         <div className="card-body">

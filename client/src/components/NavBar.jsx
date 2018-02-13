@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Login from './auth/login';
+import Logout from './auth/logout';
+import AuthButton from './auth/authButton';
 
 class NavBar extends Component {
 
@@ -11,7 +14,7 @@ class NavBar extends Component {
                 navbar 
                 navbar-expand-lg 
                 fixed-top 
-                border-info
+                border-dark
                 border-bottom 
                 rounded-bottom" 
                 id="mainNav"
@@ -32,10 +35,13 @@ class NavBar extends Component {
                                 <Link to="/blog" className="nav-link text-light" style={outline}></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-light" style={outline} href="post.html">Sample Post</a>
+                                <Link className="nav-link text-light" style={outline} to="/post/blog">New Post</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-light" style={outline} href="contact.html">Contact</a>
+                            </li>
+                            <li className="nav-item">
+                                <AuthButton />
                             </li>
                         </ul>
                     </div>

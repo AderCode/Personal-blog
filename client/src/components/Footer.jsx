@@ -53,7 +53,7 @@ class Footer extends Component {
 
             </div>
             <div className="row" style={{ backgroundColor: 'black' }}>
-                <p className="mt-2 text-white mx-auto">Copyright stuff and junk.</p>
+                <p className="mt-2 text-white mx-auto">Copyright junk and stuff.</p>
             </div>
             </Fragment>
         )

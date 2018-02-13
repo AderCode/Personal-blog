@@ -28,8 +28,8 @@ class Blogs extends Component {
                     let description = `${blog.content.substring(0, 25)}...`
                     let style = {width: '25rem'}
                     return (
-                        <div key={blog.id} className="col-md-4 mx-auto">
-                            <div className="card border border-info rounded" style={style}>
+                        <div key={blog.id} className="col-md-4">
+                            <div className="card border border-dark rounded mx-auto" style={style}>
                             <img className="card-img-top" src={'https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/27503625_1826562950971048_5633044519166377623_o.jpg?oh=fc70ff500362c8744d5ccc92cf089ef4&oe=5ADC0002'} alt="Card image cap" />
                             <div className="card-body">
                                 <h5 className="card-title">{blog.title}</h5>
